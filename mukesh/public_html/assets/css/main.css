@@ -11622,7 +11622,8 @@ pre .code {
 
 .contact {
   position: relative;
-  min-height: 700px;
+  /* min-height: 700px; */
+  min-height: 500px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -11663,7 +11664,8 @@ pre .code {
 .contact .contact-info-card {
   padding: 35px;
   background: #fff;
-  min-height: 500px;
+  /* min-height: 500px; */
+  min-height: 404;
 }
 
 .contact .contact-info-card {
