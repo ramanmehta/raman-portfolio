@@ -29,6 +29,8 @@
   <link rel="stylesheet" type="text/css" href="../assets/css/virtual.css">
   
   <link rel="stylesheet" type="text/css" href="../assets/css/topbar.virtual.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 <body class="theme-red">
   
@@ -268,7 +270,7 @@
               </div>
             </li>
             <li>
-              <div class="title">2013 - 2014</div>
+              <div class="title">2013 - 2017</div>
               <div class="details">
                 <h5>IT Executive</h5>
                 <small class="fg-theme">Tarsan Mvas</small>
@@ -279,7 +281,7 @@
               <div class="title">2011 - 2013</div>
               <div class="details">
                 <h5>IT Associate</h5>
-                <small class="fg-theme">University of Study</small>
+                <small class="fg-theme">KR Network Cloud Technologies</small>
                 <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered</p>
               </div>
             </li>
@@ -707,25 +709,36 @@
       <div class="row py-5">
         <div class="col-lg-7 px-0 pr-lg-3 wow zoomIn">
           <div class="vg-maps">
-            <div id="google-maps" style="width: 100%; height: 100%;"></div>
+            <div id="google-maps" style="width: 100%; height: 100%;">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3430.4177178973855!2d76.683014!3d30.7066552!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fef01ac6eefcf%3A0x50d78f359a5fdaac!2sSM%20Heights!5e0!3m2!1sen!2sin!4v1660021905438!5m2!1sen!2sin" width="824" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
           </div>
         </div>
         <div class="col-lg-5">
-          <form class="vg-contact-form">
+            <!-- <form action="sendMail.php" method="post"  > -->
+            <!-- <form onsubmit="sendEmail(); reset(); return false;">  -->
+          <form class="vg-contact-form" id="contact-form">
             <div class="form-row">
               <div class="col-12 mt-3 wow fadeInUp">
-                <input class="form-control" type="text" name="Name" placeholder="Your Name">
+                <input class="form-control" type="text" name="Name" id="name" placeholder="Your Name">
               </div>
               <div class="col-6 mt-3 wow fadeInUp">
-                <input class="form-control" type="text" name="Email" placeholder="Email Address">
+                <input class="form-control" type="text" name="Email" id="email" placeholder="Email Address">
               </div>
               <div class="col-6 mt-3 wow fadeInUp">
-                <input class="form-control" type="text" name="Subject" placeholder="Subject">
+                <input class="form-control" type="text" name="Subject" id="subject" placeholder="Subject">
+              </div>
+              <div class="col-6 mt-3 wow fadeInUp">
+                <input class="form-control" type="text" name="Phone" id="phone" placeholder="Phone">
+              </div>
+              <div class="col-6 mt-3 wow fadeInUp">
+                <input class="form-control" type="text" name="Country" id="country" placeholder="Country">
               </div>
               <div class="col-12 mt-3 wow fadeInUp">
-                <textarea class="form-control" name="Message" rows="6" placeholder="Enter message here.."></textarea>
+                <textarea class="form-control" name="Message" rows="6" id="message" placeholder="Enter message here.."></textarea>
               </div>
-              <button type="submit" class="btn btn-theme mt-3 wow fadeInUp ml-1">Send Message</button>
+              <!-- <input type="submit" value="Send Message" class="btn btn-theme mt-3 wow fadeInUp ml-1"> -->
+              <button type="submit" id="submit" class="btn btn-theme mt-3 wow fadeInUp ml-1">Send Message</button>
             </div>
           </form>
         </div>
@@ -742,7 +755,7 @@
           <div class="footer-info">
             <p>Where to find me</p>
             <hr class="divider">
-            <p class="fs-large fg-white">1600 Amphitheatre Parkway Mountain View, California 94043 US</p>
+            <p class="fs-large fg-white">SM Heights, Next 57, Ground Floor-33, NH 5, Industrial Area, Sector 74, Sahibzada Ajit Singh Nagar, Punjab 140308</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3 py-3">
@@ -762,15 +775,14 @@
             <p>Contact me</p>
             <hr class="divider">
             <ul class="list-unstyled">
-              <li>info@virtual.com</li>
-              <li>+8890234</li>
-              <li>+813023</li>
+              <li>ramanrax@gmail.com</li>
+              <li>+91-9434981464</li>
             </ul>
           </div>
         </div>
       </div>
       <div class="row justify-content-center mt-3">
-        <div class="col-12 mb-3">
+        <!-- <div class="col-12 mb-3">
           <h3 class="fw-normal text-center">Subscribe</h3>
         </div>
         <div class="col-lg-6">
@@ -779,10 +791,11 @@
               <input type="text" class="form-control" placeholder="Email address">
               <input type="submit" class="btn btn-theme no-shadow" value="Subscribe">
             </div>
-          </form>
-        </div>
+          </form> 
+        </div> -->
         <div class="col-12">
-          <p class="text-center mb-0 mt-4">Copyright &copy;2020. All right reserved | This template is made with <span class="ti-heart fg-theme-red"></span> by <a href="https://www.macodeid.com/">MACode ID</a></p>
+          <p class="text-center mb-0 mt-4">Copyright &copy;2020. All right reserved.</p> 
+          <!-- <p class="text-center mb-0 mt-4">Copyright &copy;2020. All right reserved | This template is made with <span class="ti-heart fg-theme-red"></span> by <a href="#">MACode ID</a></p> -->
         </div>
       </div>
     </div>
@@ -813,7 +826,43 @@
     
   <script src="../assets/js/topbar-virtual.js"></script>
 
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIA_zqjFMsJM_sxP9-6Pde5vVCTyJmUHM&callback=initMap"></script>
+  <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIA_zqjFMsJM_sxP9-6Pde5vVCTyJmUHM&callback=initMap"></script> -->
   
+
+  <script>
+    $(document).ready(function(){
+        $("#submit").click(function(){
+        var name = $("#name").val();
+        var email = $("#email").val();
+        var subject = $("#subject").val();
+        var phone = $("#phone").val();
+        var country = $("#country").val();
+        var message = $("#message").val();
+        // Returns successful data submission message when the entered information is stored in database.
+        var dataString = 'name1='+ name + '&email1='+ email + '&subject1='+ subject + '&phone1='+ phone + '&country1='+ country + '&message1='+ message;
+        if(name==''||email==''||subject==''||phone==''||country==''||message=='')
+        {
+        alert("Please Fill All Fields");
+        }
+        else
+        {
+        // AJAX Code To Submit Form.
+        $.ajax({
+        type: "POST",
+        url: "sendMail.php",
+        data: dataString,
+        cache: false,
+        success: function(result){
+        alert(result);
+              $('#contact-form').each(function(){
+              this.reset();
+            });
+        }
+        });
+        }
+        return false;
+        });
+        });
+  </script>
 </body>
 </html>
